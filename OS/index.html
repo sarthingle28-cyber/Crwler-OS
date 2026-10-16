@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>Crwler OS</title>
+
+    <link
+        rel="stylesheet"
+        href="style.css"
+    >
+
+</head>
+
+<body>
+
+    <div class="desktop">
+
+        <div class="desktop-title">
+            Crwler OS
+        </div>
+
+
+        <!-- DESKTOP ICONS -->
+
+        <div class="desktop-icons">
+
+            <button
+                class="desktop-icon"
+                onclick="openApp('search')"
+            >
+                <span class="icon-symbol">🔎</span>
+                <span>Search</span>
+            </button>
+
+
+            <button
+                class="desktop-icon"
+                onclick="openApp('files')"
+            >
+                <span class="icon-symbol">📁</span>
+                <span>Files</span>
+            </button>
+
+
+            <button
+                class="desktop-icon"
+                onclick="openApp('settings')"
+            >
+                <span class="icon-symbol">⚙</span>
+                <span>Settings</span>
+            </button>
+
+        </div>
+
+
+        <!-- SEARCH WINDOW -->
+
+        <section
+            id="searchWindow"
+            class="app-window"
+        >
+
+            <div class="window-header">
+
+                <span>
+                    Crwler Search
+                </span>
+
+                <button
+                    onclick="closeApp('search')"
+                >
+                    ×
+                </button>
+
+            </div>
+
+
+            <div class="window-content">
+
+                <h2>
+                    Crwler Search
+                </h2>
+
+                <p>
+                    Search the Crwler Index.
+                </p>
+
+
+                <div class="os-search-box">
+
+                    <input
+                        type="text"
+                        id="searchInput"
+                        placeholder="Search Crwler..."
+                        autocomplete="off"
+                    >
+
+                    <button
+                        onclick="performSearch()"
+                    >
+                        Search
+                    </button>
+
+                </div>
+
+
+                <div id="searchResults"></div>
+
+            </div>
+
+        </section>
+
+
+        <!-- FILES WINDOW -->
+
+        <section
+            id="filesWindow"
+            class="app-window"
+        >
+
+            <div class="window-header">
+
+                <span>
+                    Files
+                </span>
+
+                <button
+                    onclick="closeApp('files')"
+                >
+                    ×
+                </button>
+
+            </div>
+
+
+            <div class="window-content">
+
+                <h2>
+                    Crwler Files
+                </h2>
+
+                <p>
+                    File manager coming later.
+                </p>
+
+            </div>
+
+        </section>
+
+
+        <!-- SETTINGS WINDOW -->
+
+        <section
+            id="settingsWindow"
+            class="app-window"
+        >
+
+            <div class="window-header">
+
+                <span>
+                    Settings
+                </span>
+
+                <button
+                    onclick="closeApp('settings')"
+                >
+                    ×
+                </button>
+
+            </div>
+
+
+            <div class="window-content">
+
+                <h2>
+                    Crwler Settings
+                </h2>
+
+                <p>
+                    System settings coming later.
+                </p>
+
+            </div>
+
+        </section>
+
+
+        <!-- LAUNCHER -->
+
+        <div
+            id="launcher"
+            class="launcher"
+        >
+
+            <button onclick="openApp('search')">
+                Crwler Search
+            </button>
+
+            <button onclick="openApp('files')">
+                Files
+            </button>
+
+            <button onclick="openApp('settings')">
+                Settings
+            </button>
+
+            <button onclick="shutdown()">
+                Shut Down
+            </button>
+
+        </div>
+
+
+        <!-- TASKBAR -->
+
+        <div class="taskbar">
+
+            <button
+                class="launcher-button"
+                onclick="toggleLauncher()"
+            >
+                Crwler
+            </button>
+
+
+            <div
+                id="clock"
+                class="clock"
+            >
+                00:00
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>
